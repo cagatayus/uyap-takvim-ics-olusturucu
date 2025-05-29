@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICS Dosyasını Takviminize Nasıl Eklersiniz?</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 60px;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .guide-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .guide-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+        }
+
+        .guide-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #4285f4, #ea4335, #fbbc05, #34a853);
+        }
+
+        .guide-card.outlook::before {
+            background: linear-gradient(90deg, #0078d4, #106ebe);
+        }
+
+        .guide-card h2 {
+            display: flex;
+            align-items: center;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+
+        .guide-card h2 .icon {
+            font-size: 3rem;
+            margin-right: 15px;
+        }
+
+        .steps {
+            list-style: none;
+        }
+
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            border-left: 5px solid #4285f4;
+            transition: all 0.3s ease;
+        }
+
+        .outlook .step {
+            border-left-color: #0078d4;
+        }
+
+        .step:hover {
+            background: #e3f2fd;
+            transform: translateX(5px);
+        }
+
+        .step-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: #4285f4;
+            color: white;
+            border-radius: 50%;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .outlook .step-number {
+            background: #0078d4;
+        }
+
+        .step-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+
+        .step-content p {
+            color: #5a6c7d;
+            font-size: 1rem;
+        }
+
+        .highlight {
+            background: #fff3cd;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #856404;
+        }
+
+        .mobile-section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .mobile-section h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+
+        .mobile-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .mobile-card {
+            text-align: center;
+            padding: 30px;
+            border: 2px solid #e9ecef;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-card:hover {
+            border-color: #4285f4;
+            transform: translateY(-5px);
+        }
+
+        .mobile-card .icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .mobile-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .tips-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 50px;
+            border-radius: 20px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .tips-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .tip-card {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .tip-card .icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .tip-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .cta-section {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            color: #5a6c7d;
+            margin-bottom: 30px;
+        }
+
+        .download-button {
+            display: inline-flex;
+            align-items: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .download-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .download-button .icon {
+            margin-right: 10px;
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .guide-card {
+                padding: 30px 20px;
+            }
+            
+            .guide-card h2 {
+                font-size: 1.5rem;
+            }
+            
+            .step {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .step-number {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>📅 ICS Dosyasını Takviminize Nasıl Eklersiniz?</h1>
+            <p>UYAP Duruşma ICS Oluşturucu ile indirdiğiniz .ics dosyasını Google Calendar, Outlook ve diğer takvim uygulamalarına kolayca ekleyin!</p>
+        </div>
+
+        <!-- Desktop Guide -->
+        <div class="guide-grid">
+            <!-- Google Calendar Guide -->
+            <div class="guide-card">
+                <h2><span class="icon">🗓️</span>Google Calendar</h2>
+                <ol class="steps">
+                    <li class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Google Calendar'ı Açın</h3>
+                            <p><span class="highlight">calendar.google.com</span> adresine gidin ve Google hesabınızla giriş yapın.</p>
+                        </div>
+                    </li>
+                    <li class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Ayarlar Menüsüne Erişin</h3>
+                            <p>Sağ üst köşedeki <span class="highlight">⚙️ Ayarlar</span> simgesine tıklayın ve <span class="highlight">"Ayarlar"</span> seçeneğini seçin.</p>
+                        </div>
+                    </li>
+                    <li class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>"İçe ve Dışa Aktar" Sekmesi</h3>
+                            <p>Sol menüden <span class="highlight">"İçe ve dışa aktar"</span> sekmesine tıklayın.</p>
+                        </div>
+                    </li>
+                    <li class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>ICS Dosyasını Seçin</h3>
+                            <p><span class="highlight">"Dosya seç"</span> butonuna tıklayıp indirdiğiniz .ics dosyasını seçin.</p>
+                        </div>
+                    </li>
+                    <li class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>İçe Aktarın</h3>
+                            <p><span class="highlight">"İçe aktar"</span> butonuna tıklayın. Duruşmalarınız takviminizde görünecek!</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+
+            <!-- Outlook Guide -->
+            <div class="guide-card outlook">
+                <h2><span class="icon">📧</span>Microsoft Outlook</h2>
+                <ol class="steps">
+                    <li class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Outlook'u Açın</h3>
+                            <p><span class="highlight">Outlook.com</span> veya masaüstü Outlook uygulamasını açın.</p>
+                        </div>
+                    </li>
+                    <li class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Takvim Bölümüne Geçin</h3>
+                            <p>Sol alt köşedeki <span class="highlight">📅 Takvim</span> simgesine tıklayın.</p>
+                        </div>
+                    </li>
+                    <li class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>İçe Aktarma Seçeneği</h3>
+                            <p>Üst menüden <span class="highlight">"Dosya"</span> → <span class="highlight">"Aç ve Dışa Aktar"</span> → <span class="highlight">"İçe/Dışa Aktar"</span> seçin.</p>
+                        </div>
+                    </li>
+                    <li class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>ICS Dosyasını İçe Aktarın</h3>
+                            <p><span class="highlight">"iCalendar (.ics) veya vCalendar dosyasını içe aktar"</span> seçeneğini seçin.</p>
+                        </div>
+                    </li>
+                    <li class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>Dosyayı Seçin ve Bitirin</h3>
+                            <p>İndirdiğiniz .ics dosyasını seçin ve <span class="highlight">"İçe Aktar"</span> butonuna tıklayın.</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Mobile Section -->
+        <div class="mobile-section">
+            <h2>📱 Mobil Cihazlarda</h2>
+            <div class="mobile-grid">
+                <div class="mobile-card">
+                    <div class="icon">🤖</div>
+                    <h3>Android</h3>
+                    <p><strong>Google Calendar:</strong> Gmail'e .ics dosyasını e-posta olarak gönderin, e-postayı açın ve "Takvime Ekle" butonuna tıklayın.</p>
+                </div>
+                <div class="mobile-card">
+                    <div class="icon">🍎</div>
+                    <h3>iPhone / iPad</h3>
+                    <p><strong>Apple Calendar:</strong> .ics dosyasına dokunun, "Takvim ile Aç" seçeneğini seçin. Otomatik olarak iPhone takviminize eklenecek.</p>
+                </div>
+                <div class="mobile-card">
+                    <div class="icon">💾</div>
+                    <h3>Cloud Senkronizasyon</h3>
+                    <p>Dosyayı <strong>Dropbox, Google Drive</strong> veya <strong>OneDrive</strong>'a yükleyin, mobil cihazınızda açın ve takvim uygulamasında içe aktarın.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tips Section -->
+        <div class="tips-section">
+            <h2>💡 Faydalı İpuçları</h2>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <span class="icon">🔔</span>
+                    <h3>Hatırlatmalar</h3>
+                    <p>ICS dosyasında belirlediğiniz hatırlatma süreleri otomatik olarak takviminize eklenecek.</p>
+                </div>
+                <div class="tip-card">
+                    <span class="icon">🔄</span>
+                    <h3>Güncelleme</h3>
+                    <p>UYAP'ta yeni duruşmalar geldiğinde, yeni bir ICS dosyası indirip aynı işlemi tekrarlayın.</p>
+                </div>
+                <div class="tip-card">
+                    <span class="icon">👥</span>
+                    <h3>Paylaşım</h3>
+                    <p>Sekreterin veya iş ortağınızla takvim paylaşımı yaparak duruşma programını senkronize edin.</p>
+                </div>
+                <div class="tip-card">
+                    <span class="icon">📋</span>
+                    <h3>Yedekleme</h3>
+                    <p>İndirdiğiniz ICS dosyalarını saklayarak duruşma geçmişinizin yedeğini alın.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <h2>🚀 Hemen Başlayın!</h2>
+            <p>UYAP Duruşma ICS Oluşturucu'yu indirin ve duruşmalarınızı hiç kaçırmayın!</p>
+            <a href="#" class="download-button">
+                <span class="icon">⬇️</span>
+                Chrome Uzantısını İndir
+            </a>
+        </div>
+    </div>
+</body>
+</html>
