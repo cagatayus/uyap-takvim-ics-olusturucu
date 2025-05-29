@@ -130,10 +130,12 @@ Bu yazılımın kullanımından doğacak tüm riskler kullanıcıya aittir.
 Hukuki destek sağlanmaz.
 7/24 teknik destek garanti edilmez.
 
+Av. Arb. Çağatay ÜSKÜDAR [Linkedin](https://www.linkedin.com/in/%C3%A7a%C4%9Fatay-%C3%BCsk%C3%BCdar-1b557471/) [X (Twitter)](https://x.com/CagatayUskudar/)
+
 ## ⚖️ BU YAZILIMI KULLANARAK YUKARIDAKI TÜM ŞARTLARI KABUL ETMİŞ OLURSUNUZ
 
 ## 🤝 KATKIDA BULUNANLAR VE TEŞEKKÜRLER
-Bu projeye katkıda bulunan tüm geliştirici ve test eden avukat meslektaşlarımıze teşekkürler.
+Bu projeye katkıda bulunan tüm geliştirici ve test eden avukat meslektaşlarımıza teşekkürler.
 
 ## 📄 LİSANS
 Bu proje MIT Lisansı altında yayınlanmıştır. Detaylar için LICENSE dosyasına bakınız.
