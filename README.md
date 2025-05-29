@@ -66,3 +66,5 @@ Bir sorunla karşılaştıysanız:
 ## 📞 İletişim
 
 Sorularınız için: [bilgi@uskudar.av.tr](mailto:bilgi@uskudar.av.tr)
+
+Bu uygulama resmi UYAP ürünü değildir.
