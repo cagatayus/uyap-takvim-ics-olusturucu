@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "UYAP Avukat Portal duruşma listesini .ics takvim formatına dönüştürür. Hatırlatmalar ile duruşmalarınızı kaçırmayın!",
   "author": "Av. Çağatay ÜSKÜDAR",
-  "homepage_url":"https://github.com/cagatayus/uyap-takvim-ics-olusturucu/"
+  "homepage_url":"https://github.com/cagatayus/uyap-takvim-ics-olusturucu/",
   "permissions": [
     "storage",
     "downloads","scripting",
