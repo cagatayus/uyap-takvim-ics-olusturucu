@@ -41,6 +41,8 @@ Chrome Web Store'dan tek tıkla kurulum yakında mevcut olacak.
 - Mozilla Thunderbird
 - Diğer .ICS uzantısını destekleyen tüm uygulamalar
 
+Takvim uygulamalarına .ics dosyasını eklemek için rehber [.İCS Ekleme Rehberi](https://cagatayus.github.io/uyap-takvim-ics-olusturucu/ics-nasil-eklenir.html)
+
 ## ⚙️ Hatırlatma Seçenekleri
 
 - **Dakika**: 1-59 dakika önce
