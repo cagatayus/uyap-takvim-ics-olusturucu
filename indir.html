@@ -49,6 +49,12 @@
             animation: bounce 2s infinite;
         }
 
+        .logo img {
+            width: 80px;
+            height: 80px;
+            animation: bounce 2s infinite;
+        }
+
         @keyframes bounce {
             0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
             40% { transform: translateY(-10px); }
@@ -257,6 +263,69 @@
             transform: translateY(-2px);
         }
 
+        /* Developer Social Links Hover Effects */
+        .developer-section a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2) !important;
+        }
+
+        .developer-section a[href*="linkedin"]:hover {
+            background: #005885 !important;
+        }
+
+        .developer-section a[href*="x.com"]:hover {
+            background: #1a91da !important;
+        }
+
+        .developer-section a[href*="mailto"]:hover {
+            background: #d33828 !important;
+        }
+
+        /* Disclaimer Section */
+        .disclaimer-section {
+            background: linear-gradient(135deg, #fff3cd 0%, #f8d7da 100%);
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            text-align: left;
+            border-left: 5px solid #dc3545;
+        }
+
+        .disclaimer-section h3 {
+            color: #721c24;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .disclaimer-section h3 .icon {
+            margin-right: 10px;
+            font-size: 1.8rem;
+        }
+
+        .disclaimer-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .disclaimer-list li {
+            padding: 8px 0;
+            color: #721c24;
+            display: flex;
+            align-items: flex-start;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .disclaimer-list li::before {
+            content: '⚠️';
+            margin-right: 12px;
+            font-size: 1rem;
+            margin-top: 2px;
+            flex-shrink: 0;
+        }
+
         @media (max-width: 768px) {
             .download-container {
                 padding: 40px 30px;
@@ -283,6 +352,16 @@
             .social-links {
                 flex-direction: column;
                 align-items: center;
+            }
+
+            .developer-section div[style*="flex"] {
+                flex-direction: column !important;
+                text-align: center;
+            }
+
+            .developer-section div[style*="text-align: left"] {
+                text-align: center !important;
+                margin-top: 15px;
             }
         }
     </style>
@@ -354,6 +433,46 @@
                 <li>Açık kaynak - kaynak kodu incelenebilir</li>
                 <li>KVKK uyumlu geliştirme</li>
             </ul>
+        </div>
+
+        <!-- Sorumluluk Beyanı -->
+        <div class="disclaimer-section">
+            <h3><span class="icon">⚖️</span>Sorumluluk Beyanı</h3>
+            <ul class="disclaimer-list">
+                <li>Bu yazılım "OLDUĞU GİBİ" temelinde sunulmakta olup, geliştiricisi tarafından herhangi bir garanti verilmemektedir.</li>
+                <li>Duruşma tarihlerini mutlaka UYAP'tan teyit ediniz.</li>
+                <li>Mesleki sorumluluklarınız size aittir.</li>
+                <li>Resmi UYAP ürünü değildir, TBB veya herhangi bir baro bağlantısı yoktur.</li>
+                <li>Kullanım riski kullanıcıya aittir.</li>
+                <li>Geliştiricisi herhangi bir zarardan sorumlu tutulamaz.</li>
+            </ul>
+        </div>
+
+        <!-- Developer Info Section -->
+        <div class="developer-section" style="background: linear-gradient(135deg, #f8f9fa 0%, #e3f2fd 100%); padding: 40px; border-radius: 20px; margin-bottom: 30px; text-align: center;">
+            <div style="display: flex; align-items: center; justify-content: center; margin-bottom: 25px;">
+                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 20px; font-size: 2.5rem; color: white;">👨‍💼</div>
+                <div style="text-align: left;">
+                    <h3 style="color: #2c3e50; margin: 0; font-size: 1.8rem; font-weight: 700;">Geliştirici</h3>
+                    <p style="color: #667eea; margin: 5px 0 0 0; font-size: 1.3rem; font-weight: 600;">Av. Arb. Çağatay Üsküdar</p>
+                </div>
+            </div>
+           
+            
+            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                <a href="https://www.linkedin.com/in/%C3%A7a%C4%9Fatay-%C3%BCsk%C3%BCdar-1b557471/" target="_blank" style="display: flex; align-items: center; background: #0077b5; color: white; padding: 12px 25px; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(0,119,181,0.3);">
+                    <span style="margin-right: 10px; font-size: 1.2rem;">💼</span>
+                    LinkedIn'de Bağlan
+                </a>
+                <a href="https://x.com/CagatayUskudar" target="_blank" style="display: flex; align-items: center; background: #1DA1F2; color: white; padding: 12px 25px; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(29,161,242,0.3);">
+                    <span style="margin-right: 10px; font-size: 1.2rem;">🐦</span>
+                    X'te Takip Et
+                </a>
+                <a href="mailto:bilgi@uskudar.av.tr" style="display: flex; align-items: center; background: #ea4335; color: white; padding: 12px 25px; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(234,67,53,0.3);">
+                    <span style="margin-right: 10px; font-size: 1.2rem;">📧</span>
+                    E-posta Gönder
+                </a>
+            </div>
         </div>
 
         <!-- Footer -->
