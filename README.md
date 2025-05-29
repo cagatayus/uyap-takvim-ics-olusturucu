@@ -70,3 +70,74 @@ Bir sorunla karşılaştıysanız:
 Sorularınız için: [bilgi@uskudar.av.tr](mailto:bilgi@uskudar.av.tr)
 
 Bu uygulama resmi UYAP ürünü değildir.
+
+## ⚖️ SORUMSUZLUK BEYANI VE YASAL UYARILAR
+## 🚨 ÖNEMLİ HUKUKİ UYARI
+Bu yazılım "OLDUĞU GİBİ" temelinde sunulmakta olup, geliştiricisi tarafından herhangi bir garanti verilmemektedir. Bu yazılımın kullanımından doğabilecek her türlü doğrudan, dolaylı, özel, rastlantısal veya sonuçsal zararlardan geliştirici sorumlu tutulamaz.
+## 🔒 VERİ GÜVENLİĞİ VE GİZLİLİK
+
+- Bu uzantı hiçbir kişisel veri toplamaz, saklamaz veya üçüncü taraflarla paylaşmaz
+- Tüm işlemler yerel cihazınızda gerçekleşir
+- UYAP giriş bilgilerinize erişim yoktur
+- İşlenen veriler sadece takvim dosyası oluşturmak için kullanılır
+
+## ⚖️ UYAP VE BARO İLİŞKİSİ
+
+- Bu yazılım resmi UYAP veya Adalet Bakanlığı ürünü veya onaylanmış bir eklenti **DEĞİLDİR**
+- Türkiye Barolar Birliği veya herhangi bir baro ile resmi bağlantısı **YOKTUR**
+- Meslektaş dayanışması çerçevesinde **ücretsiz olarak** geliştirilmiştir.
+
+## 💼 MESLEKİ SORUMLULUK
+Kullanıcı avukatlar:
+
+- Duruşma tarihlerini mutlaka UYAP'tan teyit etmelidir. 
+- Bu yazılımın verdiği bilgilere teyit edilmeksizin güvenmemelidir.
+- Mesleki yükümlülüklerini yerine getirmekten kendileri sorumludur.
+
+## 🔧 TEKNİK SORUMLULUK SINIRI VE GARANTİ REDDİ
+
+- Eklentinin kesintisiz çalışması garanti edilmez.
+- UYAP sistemindeki değişiklikler nedeniyle çalışmayabilir.
+- Takvim uygulamalarındaki uyumsuzluklar olabilir.
+- Güncellemeler kullanıcı sorumluluğundadır.
+
+Geliştirici, bu yazılımın:
+
+- Hatasız çalışacağına
+- İhtiyaçlarınızı karşılayacağına
+- Kesintisiz hizmet vereceğine
+- Güncel kalacağına dair hiçbir garanti vermez
+
+## 📱 KULLANIM KOŞULLARI
+Bu yazılımı kullanarak:
+
+- Yukarıdaki tüm uyarıları okuduğunuzu ve kabul ettiğinizi
+- Yazılımı kendi riskinizle kullandığınızı
+- Herhangi bir zarardan geliştiriciyi sorumlu tutmayacağınızı
+- Mesleki sorumluluklarınızı bilerek hareket edeceğinizi beyan etmiş olursunuz
+
+## ⚠️ KULLANIM RİSKİ
+Bu yazılımın kullanımından doğacak tüm riskler kullanıcıya aittir. 
+Özellikle:
+- **Duruşma kaçırma riski**
+- **Yanlış tarih/saat/zaman dilimi riski**
+- **Teknik arıza riski**
+- **Veri kaybı riski kullanıcı tarafından kabul edilmiştir.**
+
+## 📞 İLETİŞİM VE DESTEK
+
+İletişim: bilgi@uskudar.av.tr
+Hukuki destek sağlanmaz.
+7/24 teknik destek garanti edilmez.
+
+## ⚖️ BU YAZILIMI KULLANARAK YUKARIDAKI TÜM ŞARTLARI KABUL ETMİŞ OLURSUNUZ
+
+## 🤝 KATKIDA BULUNANLAR VE TEŞEKKÜRLER
+Bu projeye katkıda bulunan tüm geliştirici ve test eden avukat meslektaşlarımıze teşekkürler.
+
+## 📄 LİSANS
+Bu proje MIT Lisansı altında yayınlanmıştır. Detaylar için LICENSE dosyasına bakınız.
+Copyright (c) 2025 - Av. Arb. Çağatay ÜSKÜDAR
+
+
+Bu yazılım aktif olarak geliştirilmekte ve desteklenmektedir.
