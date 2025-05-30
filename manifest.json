@@ -6,7 +6,6 @@
   "author": "Av. Çağatay ÜSKÜDAR",
   "homepage_url":"https://github.com/cagatayus/uyap-takvim-ics-olusturucu/",
   "permissions": [
-    "storage",
     "downloads","scripting",
     "tabs"
   ],
